@@ -1,0 +1,494 @@
+{
+  "selected_model": "Random Forest",
+  "validation_comparison": [
+    {
+      "model": "Dummy baseline",
+      "macro_f1": 0.21741569881613645,
+      "accuracy": 0.48395154240039967,
+      "samples": 8007,
+      "parameters": {},
+      "original_settings": true
+    },
+    {
+      "model": "Logistic Regression",
+      "macro_f1": 0.8125289182740247,
+      "accuracy": 0.8191582365430249,
+      "samples": 8007,
+      "parameters": {
+        "C": 10.0,
+        "class_weight": null
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Decision Tree",
+      "macro_f1": 0.8962323172409624,
+      "accuracy": 0.900462095666292,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 10,
+        "min_samples_leaf": 20
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Random Forest",
+      "macro_f1": 0.9090397547223806,
+      "accuracy": 0.9132009491694767,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 14,
+        "max_features": 1.0,
+        "min_samples_leaf": 3
+      },
+      "original_settings": false
+    }
+  ],
+  "test_report": {
+    "Low": {
+      "precision": 0.9118811881188119,
+      "recall": 0.8920096852300242,
+      "f1-score": 0.9018359853121175,
+      "support": 2065.0
+    },
+    "Medium": {
+      "precision": 0.9126648420004977,
+      "recall": 0.9465806451612904,
+      "f1-score": 0.9293134025842412,
+      "support": 3875.0
+    },
+    "High": {
+      "precision": 0.9181910569105691,
+      "recall": 0.8742138364779874,
+      "f1-score": 0.8956629491945477,
+      "support": 2067.0
+    },
+    "accuracy": 0.913825402772574,
+    "macro avg": {
+      "precision": 0.9142456956766262,
+      "recall": 0.9042680556231008,
+      "f1-score": 0.9089374456969689,
+      "support": 8007.0
+    },
+    "weighted avg": {
+      "precision": 0.9138893256964432,
+      "recall": 0.913825402772574,
+      "f1-score": 0.9135401599436228,
+      "support": 8007.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      1842,
+      163,
+      60
+    ],
+    [
+      106,
+      3668,
+      101
+    ],
+    [
+      72,
+      188,
+      1807
+    ]
+  ],
+  "split_method": "Stratified 60/20/20 train/validation/test split.",
+  "split_counts": {
+    "train": 24020,
+    "validation": 8007,
+    "test": 8007
+  },
+  "split_class_counts": {
+    "train": {
+      "Medium": 11624,
+      "High": 6202,
+      "Low": 6194
+    },
+    "validation": {
+      "Medium": 3875,
+      "High": 2067,
+      "Low": 2065
+    },
+    "test": {
+      "Medium": 3875,
+      "High": 2067,
+      "Low": 2065
+    }
+  },
+  "feature_importance": [
+    {
+      "feature": "Age",
+      "mean": 0.0003995810825397905,
+      "std": 0.00023332041018787574
+    },
+    {
+      "feature": "PlayTimeHours",
+      "mean": 0.0012910984424723642,
+      "std": 0.0006246441151151644
+    },
+    {
+      "feature": "InGamePurchases",
+      "mean": 0.0013768290923502253,
+      "std": 0.0004908922637830923
+    },
+    {
+      "feature": "SessionsPerWeek",
+      "mean": 0.44881461906969516,
+      "std": 0.005648346720566737
+    },
+    {
+      "feature": "AvgSessionDuration",
+      "mean": 0.35907736422099124,
+      "std": 0.0036125027962838874
+    },
+    {
+      "feature": "PlayerLevel",
+      "mean": 0.030342070872201754,
+      "std": 0.0034942603172655627
+    },
+    {
+      "feature": "AchievementsUnlocked",
+      "mean": 0.036568176373331686,
+      "std": 0.003871055583670043
+    },
+    {
+      "feature": "Gender",
+      "mean": 0.0014044271085082254,
+      "std": 0.0006347929262484473
+    },
+    {
+      "feature": "Location",
+      "mean": 0.0012446871981283136,
+      "std": 0.0002477845706201267
+    },
+    {
+      "feature": "GameGenre",
+      "mean": 0.00240277161781847,
+      "std": 0.00046911730616631183
+    }
+  ],
+  "dataset_fingerprint": "63e63057d2984a0630d9af5457df564ac35af5ec0d9d7d82dad6a8e7097f4e15",
+  "class_order": [
+    "High",
+    "Low",
+    "Medium"
+  ],
+  "confusion_class_order": [
+    "Low",
+    "Medium",
+    "High"
+  ],
+  "feature_definitions": {
+    "AchievementsPerLevel": "AchievementsUnlocked / PlayerLevel; zero level becomes missing."
+  },
+  "duration_minutes_confirmed": false,
+  "source": "Unverified local CSV; provenance and synthetic status unknown",
+  "tuning_results": [
+    {
+      "model": "Dummy baseline",
+      "macro_f1": 0.21741569881613645,
+      "accuracy": 0.48395154240039967,
+      "samples": 8007,
+      "parameters": {},
+      "original_settings": true
+    },
+    {
+      "model": "Logistic Regression",
+      "macro_f1": 0.8125058553967045,
+      "accuracy": 0.8191582365430249,
+      "samples": 8007,
+      "parameters": {
+        "C": 1.0,
+        "class_weight": null
+      },
+      "original_settings": true
+    },
+    {
+      "model": "Logistic Regression",
+      "macro_f1": 0.8122926522709563,
+      "accuracy": 0.8190333458224054,
+      "samples": 8007,
+      "parameters": {
+        "C": 0.1,
+        "class_weight": null
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Logistic Regression",
+      "macro_f1": 0.7818368033692642,
+      "accuracy": 0.7795678781066567,
+      "samples": 8007,
+      "parameters": {
+        "C": 0.1,
+        "class_weight": "balanced"
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Logistic Regression",
+      "macro_f1": 0.7823215135145354,
+      "accuracy": 0.7800674409891345,
+      "samples": 8007,
+      "parameters": {
+        "C": 1.0,
+        "class_weight": "balanced"
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Logistic Regression",
+      "macro_f1": 0.8125289182740247,
+      "accuracy": 0.8191582365430249,
+      "samples": 8007,
+      "parameters": {
+        "C": 10.0,
+        "class_weight": null
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Logistic Regression",
+      "macro_f1": 0.7823215135145354,
+      "accuracy": 0.7800674409891345,
+      "samples": 8007,
+      "parameters": {
+        "C": 10.0,
+        "class_weight": "balanced"
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Decision Tree",
+      "macro_f1": 0.895367108142238,
+      "accuracy": 0.8999625327838142,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 10,
+        "min_samples_leaf": 5
+      },
+      "original_settings": true
+    },
+    {
+      "model": "Decision Tree",
+      "macro_f1": 0.809550674690728,
+      "accuracy": 0.8142874984388659,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 4,
+        "min_samples_leaf": 5
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Decision Tree",
+      "macro_f1": 0.809550674690728,
+      "accuracy": 0.8142874984388659,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 4,
+        "min_samples_leaf": 20
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Decision Tree",
+      "macro_f1": 0.8091118297831633,
+      "accuracy": 0.8139128262770077,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 4,
+        "min_samples_leaf": 50
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Decision Tree",
+      "macro_f1": 0.8639831806833596,
+      "accuracy": 0.8688647433495691,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 6,
+        "min_samples_leaf": 5
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Decision Tree",
+      "macro_f1": 0.8648348560128127,
+      "accuracy": 0.8694891969526665,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 6,
+        "min_samples_leaf": 20
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Decision Tree",
+      "macro_f1": 0.8636119255514757,
+      "accuracy": 0.8682402897464718,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 6,
+        "min_samples_leaf": 50
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Decision Tree",
+      "macro_f1": 0.8962323172409624,
+      "accuracy": 0.900462095666292,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 10,
+        "min_samples_leaf": 20
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Decision Tree",
+      "macro_f1": 0.8836991735697818,
+      "accuracy": 0.8874734607218684,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 10,
+        "min_samples_leaf": 50
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Random Forest",
+      "macro_f1": 0.8906138196898192,
+      "accuracy": 0.8955913575621332,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 14,
+        "max_features": "sqrt",
+        "min_samples_leaf": 3
+      },
+      "original_settings": true
+    },
+    {
+      "model": "Random Forest",
+      "macro_f1": 0.8701613216950662,
+      "accuracy": 0.8761084051454977,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 10,
+        "max_features": "sqrt",
+        "min_samples_leaf": 3
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Random Forest",
+      "macro_f1": 0.8730655740177334,
+      "accuracy": 0.8787311102785063,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 10,
+        "max_features": "sqrt",
+        "min_samples_leaf": 10
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Random Forest",
+      "macro_f1": 0.907348032253242,
+      "accuracy": 0.9115773698014238,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 10,
+        "max_features": 1.0,
+        "min_samples_leaf": 3
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Random Forest",
+      "macro_f1": 0.9066773701812644,
+      "accuracy": 0.9109529161983264,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 10,
+        "max_features": 1.0,
+        "min_samples_leaf": 10
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Random Forest",
+      "macro_f1": 0.8853911311910384,
+      "accuracy": 0.8903459472961159,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 14,
+        "max_features": "sqrt",
+        "min_samples_leaf": 10
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Random Forest",
+      "macro_f1": 0.9090397547223806,
+      "accuracy": 0.9132009491694767,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 14,
+        "max_features": 1.0,
+        "min_samples_leaf": 3
+      },
+      "original_settings": false
+    },
+    {
+      "model": "Random Forest",
+      "macro_f1": 0.907301530637466,
+      "accuracy": 0.9115773698014238,
+      "samples": 8007,
+      "parameters": {
+        "max_depth": 14,
+        "max_features": 1.0,
+        "min_samples_leaf": 10
+      },
+      "original_settings": false
+    }
+  ],
+  "leakage_audit": {
+    "target": "EngagementLevel",
+    "target_classes": [
+      "Low",
+      "Medium",
+      "High"
+    ],
+    "input_features": [
+      "Age",
+      "PlayTimeHours",
+      "InGamePurchases",
+      "SessionsPerWeek",
+      "AvgSessionDuration",
+      "PlayerLevel",
+      "AchievementsUnlocked",
+      "Gender",
+      "Location",
+      "GameGenre"
+    ],
+    "excluded_columns": [
+      "GameDifficulty",
+      "PlayerID"
+    ],
+    "row_overlap": false,
+    "identical_predictor_overlap": false,
+    "known_player_overlap": false,
+    "preprocessing_fit": "Training partition only, independently for each candidate.",
+    "label_construction": "Unverified; activity-derived labels could make classification circular.",
+    "split_index_sha256": {
+      "train": "3375191735539cdaf87678bd1739ce66a0eb162dc4f302352ab73459a97c33b2",
+      "validation": "4e9a80fc0d8d51bd90b82e3f9114ab6b13d6b0e722301897e819cf8bbe573cf5",
+      "test": "593ee0f0af79cf197ed8bbaffc168e48cb8a82fc0a15d73bca06e0626d1e9a47"
+    }
+  },
+  "selection_protocol": "Fixed 24-candidate search; validation macro F1 only; first candidate wins ties. No train+validation refit. One test prediction for the selected pipeline per run. Repeated runs do not provide independent test evidence."
+}

@@ -1,0 +1,170 @@
+{
+  "selected_model": "Decision Tree",
+  "validation_comparison": [
+    {
+      "model": "Dummy baseline",
+      "macro_f1": 0.21741569881613645,
+      "accuracy": 0.48395154240039967,
+      "samples": 8007
+    },
+    {
+      "model": "Logistic Regression",
+      "macro_f1": 0.8125058553967045,
+      "accuracy": 0.8191582365430249,
+      "samples": 8007
+    },
+    {
+      "model": "Decision Tree",
+      "macro_f1": 0.895367108142238,
+      "accuracy": 0.8999625327838142,
+      "samples": 8007
+    },
+    {
+      "model": "Random Forest",
+      "macro_f1": 0.8906138196898192,
+      "accuracy": 0.8955913575621332,
+      "samples": 8007
+    }
+  ],
+  "test_report": {
+    "Low": {
+      "precision": 0.8942885771543087,
+      "recall": 0.864406779661017,
+      "f1-score": 0.8790938192563408,
+      "support": 2065.0
+    },
+    "Medium": {
+      "precision": 0.899526302667664,
+      "recall": 0.9310967741935484,
+      "f1-score": 0.9150393101699213,
+      "support": 3875.0
+    },
+    "High": {
+      "precision": 0.9005,
+      "recall": 0.8713110788582487,
+      "f1-score": 0.8856651094172608,
+      "support": 2067.0
+    },
+    "accuracy": 0.8984638441363807,
+    "macro avg": {
+      "precision": 0.8981049599406575,
+      "recall": 0.8889382109042714,
+      "f1-score": 0.8932660796145077,
+      "support": 8007.0
+    },
+    "weighted avg": {
+      "precision": 0.8984268558337511,
+      "recall": 0.8984638441363807,
+      "f1-score": 0.8981860677954623,
+      "support": 8007.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      1785,
+      209,
+      71
+    ],
+    [
+      139,
+      3608,
+      128
+    ],
+    [
+      72,
+      194,
+      1801
+    ]
+  ],
+  "split_method": "Stratified 60/20/20 train/validation/test split.",
+  "split_counts": {
+    "train": 24020,
+    "validation": 8007,
+    "test": 8007
+  },
+  "split_class_counts": {
+    "train": {
+      "Medium": 11624,
+      "High": 6202,
+      "Low": 6194
+    },
+    "validation": {
+      "Medium": 3875,
+      "High": 2067,
+      "Low": 2065
+    },
+    "test": {
+      "Medium": 3875,
+      "High": 2067,
+      "Low": 2065
+    }
+  },
+  "feature_importance": [
+    {
+      "feature": "Age",
+      "mean": -0.0005199460317483565,
+      "std": 9.262739055447338e-05
+    },
+    {
+      "feature": "PlayTimeHours",
+      "mean": -0.0006585669303115586,
+      "std": 0.00018976968783360329
+    },
+    {
+      "feature": "InGamePurchases",
+      "mean": -0.001171217890862127,
+      "std": 0.0003172090244976982
+    },
+    {
+      "feature": "SessionsPerWeek",
+      "mean": 0.43548882302539366,
+      "std": 0.008415665166722857
+    },
+    {
+      "feature": "AvgSessionDuration",
+      "mean": 0.347548627565817,
+      "std": 0.00343376082614082
+    },
+    {
+      "feature": "PlayerLevel",
+      "mean": 0.02634388257606494,
+      "std": 0.001553904368468019
+    },
+    {
+      "feature": "AchievementsUnlocked",
+      "mean": 0.03181240463201392,
+      "std": 0.001953587395507769
+    },
+    {
+      "feature": "Gender",
+      "mean": -0.001077675365904233,
+      "std": 0.00022474906597588778
+    },
+    {
+      "feature": "Location",
+      "mean": -0.0010426395969975004,
+      "std": 0.0002495230957539232
+    },
+    {
+      "feature": "GameGenre",
+      "mean": -0.002308476552326133,
+      "std": 0.00030856500912655076
+    }
+  ],
+  "dataset_fingerprint": "63e63057d2984a0630d9af5457df564ac35af5ec0d9d7d82dad6a8e7097f4e15",
+  "class_order": [
+    "High",
+    "Low",
+    "Medium"
+  ],
+  "confusion_class_order": [
+    "Low",
+    "Medium",
+    "High"
+  ],
+  "feature_definitions": {
+    "AchievementsPerLevel": "AchievementsUnlocked / PlayerLevel; zero level becomes missing."
+  },
+  "duration_minutes_confirmed": false,
+  "source": "Unverified local CSV; provenance and synthetic status unknown"
+}
